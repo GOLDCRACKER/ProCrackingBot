@@ -1,8 +1,7 @@
 
---Begin Fun.lua By @BeyondTeam
+--Begin Fun.lua By @ProCracking
 --Special Thx To @To0fan
 --------------------------------
-
 local function run_bash(str)
     local cmd = io.popen(str)
     local result = cmd:read('*all')
@@ -214,7 +213,7 @@ local Clang = redis:get(Chash)
 	end
 --------------------------------
 	if (matches[1]:lower() == 'time' and not Clang) or (matches[1]:lower() == 'ساعت' and Clang) then
-		local url , res = http.request('http://api.beyond-dev.ir/time/')
+		local url , res = http.request('http://api.ProCracking-dev.ir/time/')
 		if res ~= 200 then
 			return "No connection"
 		end
@@ -314,7 +313,7 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
 if not lang then
 helpfun_en = [[
-_Beyond Reborn Fun Help Commands:_
+_ProCracking Reborn Fun Help Commands:_
 
 *!time*
 _Get time in a sticker_
@@ -406,7 +405,7 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
 if not lang then
 helpfun_fa = [[
-_Beyond Reborn Fun Help Commands:_
+_ProCracking Reborn Fun Help Commands:_
 
 *ساعت*
 _Get time in a sticker_
@@ -523,4 +522,4 @@ return {
 	run = run,
 	}
 
---#by @BeyondTeam :)
+--#by @ProCracking :)
